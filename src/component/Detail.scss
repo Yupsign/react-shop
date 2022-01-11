@@ -1,0 +1,35 @@
+
+
+
+$DetailColor : #ff0000;        // 자주 이용하는 속성을 변수로 저장 가능
+
+.red {
+  color: $DetailColor;
+}
+
+@mixin 함수() {             // 긴 속성들을 함수로 저장하여 재사용 가능
+  background: #eeeeee ;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.my-alert {
+  @include 함수()
+}
+
+
+// .my-alert2 {          // 같은 속성 복사 밑 특정 부분 수정
+//   @extend .my-alert;
+//   background: #ffe591;
+// }
+
+
+
+// div.container {       // 같은 태그 하위 속성을 가시성 좋게 작성 가능 
+//   h4 {
+//     color: blue;
+//   }
+// }
+
